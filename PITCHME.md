@@ -4,12 +4,33 @@ Operational concerns with the service worker spec and implementations
 
 ---
 
+## If something goes wrong, can we recover?
+
+
+
+---
+
 ## Types of bug scenarios
 
 * JavaScript bug in the app, which is now cached by the service worker
 * Programmatic bug in the service worker code itself
 * Error logs show bug caused by unexpected data in persistent storage
 * Error logs show odd bug that we can't reproduce, don't know root cause, but suspect service worker
+
+---
+
+## How to measure killswitch effectiveness?
+
+* Beacon event from service worker on basepage request
+* Hit the killswitch
+* Assert no repeat events (10 minute gap)
+* Assert no events after full page load and script served (10 minute gap)
+
+---
+
+## Basepage event graph after killswitch
+
+![swsse graph](https://raw.githubusercontent.com/asakusuma/ssw-operational-concerns/master/images/swsse-graph.png "SWSSE Graph")
 
 ---
 
@@ -38,5 +59,6 @@ Bugs often only affect a subset of users, or aren't bad enough to warrant a refr
 
 ## "Straw man" ideas
 
+* "Soft Terminate", with programatic + `Clear-Site-Data` API
 * Support passing header arguments when fetching `sw.js`, so that server can selectively decide whether to return the `noop` worker or use `Clear-Site-Data`
 * Support a UUID for `Clear-Site-Data`, so that `Clear-Site-Data` can be left on without dragging out negative effects
