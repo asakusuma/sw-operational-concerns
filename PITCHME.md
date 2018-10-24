@@ -23,6 +23,8 @@ Operational concerns with the service worker spec and implementations
 
 Some apps don't want to use `skipWaiting`, which doesn't seem to be 100% effective anyways
 
+---
+
 ## Need to conditionally apply killswitch
 
 Killswitch can have negative affects on user ranging from a slower app, to loss of important state. Imagine you are in the middle of filling out a form, and `Clear-Site-Data` is detected.
