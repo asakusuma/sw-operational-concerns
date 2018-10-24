@@ -6,10 +6,10 @@
 
 ## Scenarios
 
-* JavaScript bug in the app, which is now cached by the service worker
-* Programmatic bug in the service worker code itself
+* Bug in app, cached by service worker
+* Bug in service worker code
 * Error logs show bug caused by unexpected data in persistent storage
-* Error logs show odd bug that we can't reproduce, don't know root cause, but suspect service worker
+* Error logs show unreproducable bug, don't know root cause, but suspect service worker
 
 ---
 
