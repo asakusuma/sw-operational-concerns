@@ -13,8 +13,22 @@
 
 ---
 
+## Built simple noop script killswitch
+
+```JavaScript
+self.addEventListener('install', () => {
+  return self.skipWaiting();
+});
+self.addEventListener('activate', (e) => {
+  e.waitUntil(self.clients.claim());
+});
+```
+
+---
+
 ## How to measure killswitch effectiveness?
 
+* Test on real users (~3 million)
 * Beacon event from service worker on basepage request
 * Hit the killswitch
 * Assert no repeat events (10 minute gap)
@@ -29,7 +43,7 @@
 ---
 
 ## Results
-
+Week-long test, 3,727,164 Unique Devices
 <table>
   <tr>
     <th>Test</th>
@@ -45,10 +59,7 @@
     <td>No event after load + script served</td>
     <td>329</td>
     <td>0.0088%</td>
-  </tr>
-  <tr>
-    <td>Sample Size: 3,727,164 Unique Devices</td>
-  </tr>
+  </tr> 
 </table>
 
 ---
