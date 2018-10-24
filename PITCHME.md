@@ -72,21 +72,12 @@ Week-long test, 3,727,164 Unique Devices
 
 ---
 
-## Need to conditionally apply killswitch
+## Why need to conditionally apply killswitch?
 
-Bugs often only affect a subset of users, or aren't bad enough to warrant a refresh, but bad enough that you want 100% gaurantee that user will be fixed once they return to site.
-
----
-
-## "Straw man" idea
-
-"Soft Terminate", with programatic + `Clear-Site-Data` API. Terminates worker on whatever happens first:
-
-* 1 minute
-* Full page load
-* All tasks complete
-
-Then activate installed worker if available
+* Bugs that only affect a subset of users
+* Bug in feature flagged code in service worker
+* Bugs in specific versions of service worker
+* Bugs in specific version of cached application
 
 ---
 
@@ -100,3 +91,14 @@ Then activate installed worker if available
 
 Some apps don't want to use `skipWaiting`, which doesn't seem to be 100% effective anyways
 
+---
+
+## "Straw man" idea
+
+"Soft Terminate", with programatic + `Clear-Site-Data` API. Terminates worker on whatever happens first:
+
+* 1 minute
+* Full page load
+* All tasks complete
+
+Then activate installed worker if available
