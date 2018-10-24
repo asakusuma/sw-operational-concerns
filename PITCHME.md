@@ -30,7 +30,7 @@ Operational concerns with the service worker spec and implementations
 
 ## Basepage event graph after killswitch
 
-![swsse graph](https://raw.githubusercontent.com/asakusuma/ssw-operational-concerns/master/images/swsse-graph.png "SWSSE Graph")
+![swsse graph](https://raw.githubusercontent.com/asakusuma/sw-operational-concerns/master/images/swsse-graph.png "SWSSE Graph")
 
 ---
 
