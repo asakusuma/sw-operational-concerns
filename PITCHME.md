@@ -4,7 +4,7 @@
 
 ---
 
-## Types of bug scenarios
+## Scenarios
 
 * JavaScript bug in the app, which is now cached by the service worker
 * Programmatic bug in the service worker code itself
@@ -13,7 +13,7 @@
 
 ---
 
-## Built simple noop script killswitch
+## Simple noop script killswitch
 
 ```JavaScript
 self.addEventListener('install', () => {
@@ -35,8 +35,6 @@ self.addEventListener('activate', (e) => {
 * Assert no events after full page load and script served (10 minute gap)
 
 ---
-
-## Basepage event graph after killswitch
 
 ![swsse graph](https://raw.githubusercontent.com/asakusuma/sw-operational-concerns/master/images/swsse-graph.png "SWSSE Graph")
 
