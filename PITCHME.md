@@ -8,7 +8,7 @@
 
 * Bug in app, cached by service worker
 * Bug in service worker code
-* Error logs show bug caused by unexpected data in persistent storage
+* Bad data in persistent storage
 * Error logs show unreproducable bug, don't know root cause, but suspect service worker
 
 ---
