@@ -1,12 +1,6 @@
 # Service Worker Operational Concerns
 
-Operational concerns with the service worker spec and implementations
-
----
-
-## If something goes wrong, can we recover?
-
-
+> If something goes wrong, can we recover?
 
 ---
 
@@ -31,6 +25,36 @@ Operational concerns with the service worker spec and implementations
 ## Basepage event graph after killswitch
 
 ![swsse graph](https://raw.githubusercontent.com/asakusuma/sw-operational-concerns/master/images/swsse-graph.png "SWSSE Graph")
+
+---
+
+## Results
+
+<table>
+  <tr>
+    <th>Test</th>
+    <th>Devices that failed assertion</th>
+    <th>Device fail %</th>
+  </tr>
+  <tr>
+    <td>No repeat events</td>
+    <td>608</td>
+    <td>0.016%</td>
+  </tr>
+  <tr class="fragment">
+    <td>No event after load + script served</td>
+    <td>329</td>
+    <td>0.0088%</td>
+  </tr>
+  <tr class="fragment">
+    <td>John</td>
+    <td>Doe</td>
+    <td>43</td>
+  </tr>
+  <tr>
+    <td>Sample Size: 3,727,164 Unique Devices</td>
+  </tr>
+</table>
 
 ---
 
