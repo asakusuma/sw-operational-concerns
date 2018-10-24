@@ -41,15 +41,10 @@
     <td>608</td>
     <td>0.016%</td>
   </tr>
-  <tr class="fragment">
+  <tr>
     <td>No event after load + script served</td>
     <td>329</td>
     <td>0.0088%</td>
-  </tr>
-  <tr class="fragment">
-    <td>John</td>
-    <td>Doe</td>
-    <td>43</td>
   </tr>
   <tr>
     <td>Sample Size: 3,727,164 Unique Devices</td>
