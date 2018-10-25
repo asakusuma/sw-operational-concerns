@@ -90,7 +90,7 @@ Week-long test, 3,727,164 Unique Devices
 ---
 
 ## "Straw man" idea
-
+@snap[north-east]
 "Soft Terminate", with programatic + `Clear-Site-Data` API. Terminates worker on whatever happens first
 
 * 1 minute
