@@ -87,16 +87,16 @@ Week-long test, 3,727,164 Unique Devices
 * Killswitch is turned off
 * User with bug returns after being offline since before killswitch was activated
 
-Some apps don't want to use `skipWaiting`, which doesn't seem to be 100% effective anyways
-
 ---
 
 ## "Straw man" idea
 
-"Soft Terminate", with programatic + `Clear-Site-Data` API. Terminates worker on whatever happens first:
+"Soft Terminate", with programatic + `Clear-Site-Data` API. Terminates worker on whatever happens first
 
 * 1 minute
 * Full page load
 * All tasks complete
 
 Then activate installed worker if available
+
+---
